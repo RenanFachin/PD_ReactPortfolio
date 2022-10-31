@@ -4,6 +4,13 @@ import Head from 'next/head'
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 
+// Imports de imagens
+import Image from "next/image";
+import deved from '../public/dev-ed-wave.png'
+import design from '../public/design.png'
+import code from '../public/code.png'
+import consulting from '../public/consulting.png'
+
 export default function Home() {
   return (
     <div>
@@ -42,7 +49,66 @@ export default function Home() {
             <AiFillInstagram />
           </div>
 
+          <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden'>
+            <Image src={deved} layout="fill" objectFit="cover" />
+          </div>
         </section>
+
+        <section>
+          <div>
+            <h3 className='text-3xl py-1'>Skills</h3>
+            <p className='text-md py-2 leading-8 text-gray-800'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, <span className='text-teal-500'>rutrum</span> non lacus eget, tristique blandit turpis. Donec euismod <span className='text-teal-500'>rutrum</span> ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
+            </p>
+
+            <p className='text-md py-2 leading-8 text-gray-800'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, <span className='text-teal-500'>rutrum</span> non lacus eget, tristique blandit turpis.
+            </p>
+          </div>
+
+          <div>
+            {/* Design */}
+            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+              <Image src={design} width={100} height={100} className='inline'/>
+              <h3 className='text-lg font-medium pt-8 pb-2'>Beatiful Designs</h3>
+              <p className='py-2'>
+                Crating elegant designs suited for your needs design theory....
+              </p>
+              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
+                <p className='text-gray-800 py-1'>Photoshop</p>
+                <p className='text-gray-800 py-1'>Illustrator</p>
+                <p className='text-gray-800 py-1'>Figma</p>
+            </div>
+
+            {/* Code */}
+            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+              <Image src={code} width={100} height={100} className='inline'/>
+              <h3 className='text-lg font-medium pt-8 pb-2'>Beatiful Designs</h3>
+              <p className='py-2'>
+                Crating elegant designs suited for your needs design theory....
+              </p>
+              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
+                <p className='text-gray-800 py-1'>Photoshop</p>
+                <p className='text-gray-800 py-1'>Illustrator</p>
+                <p className='text-gray-800 py-1'>Figma</p>
+            </div>
+
+            {/* Consulting */}
+            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
+              <Image src={consulting} width={100} height={100} className='inline'/>
+              <h3 className='text-lg font-medium pt-8 pb-2'>Beatiful Designs</h3>
+              <p className='py-2'>
+                Crating elegant designs suited for your needs design theory....
+              </p>
+              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
+                <p className='text-gray-800 py-1'>Photoshop</p>
+                <p className='text-gray-800 py-1'>Illustrator</p>
+                <p className='text-gray-800 py-1'>Figma</p>
+            </div>
+          </div>
+
+        </section>
+
       </main>
     </div>
   )
