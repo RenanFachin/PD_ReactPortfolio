@@ -63,8 +63,7 @@ export default function Home() {
 
               <li>
                 <a 
-                className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-2 rounded-md ml-8' href='https://devrenanfachin.netlify.app/'
-                target={'_blank'}>
+                className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-2 rounded-md ml-8' href='https://devrenanfachin.netlify.app/'>
                   Resume
                 </a>
               </li>
@@ -80,15 +79,15 @@ export default function Home() {
           </div>
 
           <div className='text-5xl flex justify-center gap-14 py-3 text-gray-600 md:text-6xl'>
-            <a href='https://github.com/RenanFachin' target={'_blank'}>
+            <a href='https://github.com/RenanFachin'>
               <AiFillGithub className='dark:text-teal-700 cursor-pointer hover:text-teal-600'/>
             </a>
 
-            <a href='https://www.linkedin.com/in/renan-fachin/' target={'_blank'}>
+            <a href='https://www.linkedin.com/in/renan-fachin/'>
               <AiFillLinkedin className='dark:text-teal-700 cursor-pointer hover:text-teal-600'/>
             </a>
  
-            <a href='#' target={'_blank'}>
+            <a href='#'>
               <AiFillInstagram className='dark:text-teal-700 cursor-pointer hover:text-teal-600'/>
             </a>
 
@@ -148,7 +147,7 @@ export default function Home() {
 
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
             <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
-              <a href='https://github.com/RenanFachin/RS_ExplorerLab_RocketPAY' target={'_blank'}>
+              <a href='https://github.com/RenanFachin/RS_ExplorerLab_RocketPAY'>
                 <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
@@ -158,7 +157,7 @@ export default function Home() {
             </div> */}
 
             <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
-              <a href='https://foodexplorer182.netlify.app/' target={'_blank'}>
+              <a href='https://foodexplorer182.netlify.app/'>
                 <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
@@ -168,13 +167,13 @@ export default function Home() {
             </div> */}
 
             <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
-              <a href='https://renanfachin.github.io/PA_Pokedex/' target={'_blank'}>
+              <a href='https://renanfachin.github.io/PA_Pokedex/'>
               <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
 
             <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
-              <a href='https://rocketmovies182.netlify.app/' target={'_blank'}>
+              <a href='https://rocketmovies182.netlify.app/'>
                 <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
