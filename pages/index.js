@@ -6,10 +6,15 @@ import { AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 
 // Imports de imagens
 import Image from "next/image";
-import deved from '../public/dev-ed-wave.png'
 import design from '../public/design.png'
 import code from '../public/code.png'
 import consulting from '../public/consulting.png'
+import web1 from '../public/web1.png'
+import web2 from '../public/web2.png'
+import web3 from '../public/web3.png'
+import web4 from '../public/web4.png'
+import web5 from '../public/web5.png'
+import web6 from '../public/web6.png'
 
 export default function Home() {
   return (
@@ -20,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-10'>
+      <main className='bg-white px-10 md:px-20 lg:px-40'>
         <section className="min-h-screen">
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl font-burtons'>Dev Portifolio</h1>
@@ -36,22 +41,19 @@ export default function Home() {
           </nav>
 
           <div className='text-center p-10'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium'>Renan Fachin</h2>
-            <h3 className='text-2xl py-2'>JR. Front-End Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800'>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Renan Fachin</h2>
+            <h3 className='text-2xl py-2 md:text-3xl'>JR. Front-End Developer</h3>
+            <p className='text-md py-5 leading-8 text-gray-80 md:text-lg max-w-xl mx-auto'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, rutrum non lacus eget, tristique blandit turpis. Donec euismod libero ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
             </p>
           </div>
 
-          <div className='text-5xl flex justify-center gap-14 py-3 text-gray-600'>
+          <div className='text-5xl flex justify-center gap-14 py-3 text-gray-600 md:text-6xl'>
             <AiFillGithub />
             <AiFillLinkedin />
             <AiFillInstagram />
           </div>
 
-          <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden'>
-            <Image src={deved} layout="fill" objectFit="cover" />
-          </div>
         </section>
 
         <section>
@@ -66,7 +68,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div>
+          <div className='lg:flex gap-10'>
             {/* Design */}
             <div className='text-center shadow-lg p-10 rounded-xl my-10'>
               <Image src={design} width={100} height={100} className='inline'/>
@@ -104,6 +106,41 @@ export default function Home() {
                 <p className='text-gray-800 py-1'>Photoshop</p>
                 <p className='text-gray-800 py-1'>Illustrator</p>
                 <p className='text-gray-800 py-1'>Figma</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <h3 className='text-3xl py-1'>PortFolio</h3>
+            <p className='text-md py-2 leading-8 text-gray-800'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, <span className='text-teal-500'>rutrum</span> non lacus eget, tristique blandit turpis. Donec euismod <span className='text-teal-500'>rutrum</span> ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
+            </p>
+          </div>
+
+          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+            <div className='basis-1/3 flex-1'>
+              <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+            </div>
+
+            <div className='basis-1/3 flex-1'>
+              <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+            </div>
+
+            <div className='basis-1/3 flex-1'>
+              <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+            </div>
+
+            <div className='basis-1/3 flex-1'>
+              <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+            </div>
+
+            <div className='basis-1/3 flex-1'>
+              <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+            </div>
+
+            <div className='basis-1/3 flex-1'>
+              <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
             </div>
           </div>
 
