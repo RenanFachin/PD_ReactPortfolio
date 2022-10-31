@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 // Imports de ícones
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
@@ -9,9 +8,6 @@ import { AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 
 // Imports de imagens
 import Image from "next/image";
-import design from '../public/design.png'
-import code from '../public/code.png'
-import consulting from '../public/consulting.png'
 import web1 from '../public/web1.png'
 import web2 from '../public/web2.png'
 import web3 from '../public/web3.png'
@@ -36,7 +32,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-800'>
+      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-zinc-900'>
         <section className="min-h-screen">
           <nav className='py-12 mb-12 flex justify-between'>
             <h1 className='text-xl font-burtons dark:text-white'>Dev Portifolio</h1>
@@ -97,7 +93,7 @@ export default function Home() {
 
         <section>
           <div>
-            <h3 className='text-3xl py-1 dark:text-white'>Skills</h3>
+            <h3 className='text-3xl py-1 mt-4 md:mt-0 dark:text-white'>Skills</h3>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, <span className='text-teal-500'>rutrum</span> non lacus eget, tristique blandit turpis. Donec euismod <span className='text-teal-500'>rutrum</span> ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
             </p>
@@ -146,33 +142,37 @@ export default function Home() {
           </div>
 
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-            <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://github.com/RenanFachin/RS_ExplorerLab_RocketPAY'>
                 <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
 
-            {/* <div className='basis-1/3 flex-1'>
-              <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+            {/* <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://renanfachin.github.io/RS_IgniteLAB_Design_System-/?path=/story/pages-signin--default'>
+                <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+              </a>
             </div> */}
 
-            <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://foodexplorer182.netlify.app/'>
                 <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
 
-            {/* <div className='basis-1/3 flex-1'>
-              <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+            {/* <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://github.com/RenanFachin/RS_NLWeSports'>
+                <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+              </a>
             </div> */}
 
-            <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://renanfachin.github.io/PA_Pokedex/'>
               <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
 
-            <div className='basis-1/3 flex-1 blur-[1px] hover:blur-none transition duration-500'>
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://rocketmovies182.netlify.app/'>
                 <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
