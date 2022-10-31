@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 
 // Imports de ícones
-import { BsFillMoonStarsFill } from 'react-icons/bs'
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 
 // Imports de imagens
@@ -18,6 +18,12 @@ import web4 from '../public/web4.png'
 import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
 
+import javascriptLogo from '../public/tecs/javascript.png'
+import cssLogo from '../public/tecs/css.png'
+import htmlLogo from '../public/tecs/html.png'
+import reactLogo from '../public/tecs/reactjs.png'
+import nodeLogo from '../public/tecs/nodejs.png'
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -29,98 +35,103 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-800'>
         <section className="min-h-screen">
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl font-burtons'>Dev Portifolio</h1>
+            <h1 className='text-xl font-burtons dark:text-white'>Dev Portifolio</h1>
 
             <ul className='flex items-center'>
+              {
+              darkMode ?
               <li>
-                <BsFillMoonStarsFill
+                <BsFillSunFill
                   onClick={() => {setDarkMode(!darkMode)}}
-                  className='cursor-pointer text-2xl'
+                  className='cursor-pointer text-2xl dark:text-white'
                 />
               </li>
+
+              :
+              
               <li>
-                <a className=' bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href='#'>Resume</a>
+              <BsFillMoonStarsFill
+                onClick={() => {setDarkMode(!darkMode)}}
+                className='cursor-pointer text-2xl'
+              />
+            </li>
+              }
+
+              <li>
+                <a 
+                className=' bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-2 rounded-md ml-8' href='https://devrenanfachin.netlify.app/'
+                target={'_blank'}>
+                  Resume
+                </a>
               </li>
             </ul>
           </nav>
 
           <div className='text-center p-10'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Renan Fachin</h2>
-            <h3 className='text-2xl py-2 md:text-3xl'>JR. Front-End Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-80 md:text-lg max-w-xl mx-auto'>
+            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>JR. Front-End Developer</h3>
+            <p className='text-md py-5 leading-8 text-gray-80 md:text-lg max-w-xl mx-auto dark:text-white'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, rutrum non lacus eget, tristique blandit turpis. Donec euismod libero ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
             </p>
           </div>
 
           <div className='text-5xl flex justify-center gap-14 py-3 text-gray-600 md:text-6xl'>
-            <AiFillGithub />
-            <AiFillLinkedin />
-            <AiFillInstagram />
+            <AiFillGithub className='dark:text-teal-700'/>
+            <AiFillLinkedin className='dark:text-teal-700'/>
+            <AiFillInstagram className='dark:text-teal-700'/>
           </div>
 
         </section>
 
         <section>
           <div>
-            <h3 className='text-3xl py-1'>Skills</h3>
-            <p className='text-md py-2 leading-8 text-gray-800'>
+            <h3 className='text-3xl py-1 dark:text-white'>Skills</h3>
+            <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, <span className='text-teal-500'>rutrum</span> non lacus eget, tristique blandit turpis. Donec euismod <span className='text-teal-500'>rutrum</span> ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
             </p>
-
-            <p className='text-md py-2 leading-8 text-gray-800'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, <span className='text-teal-500'>rutrum</span> non lacus eget, tristique blandit turpis.
-            </p>
           </div>
 
-          <div className='lg:flex gap-10'>
-            {/* Design */}
+          <div className='lg:flex justify-between'>
+            {/* css */}
             <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-              <Image src={design} width={100} height={100} className='inline'/>
-              <h3 className='text-lg font-medium pt-8 pb-2'>Beatiful Designs</h3>
-              <p className='py-2'>
-                Crating elegant designs suited for your needs design theory....
-              </p>
-              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
-                <p className='text-gray-800 py-1'>Photoshop</p>
-                <p className='text-gray-800 py-1'>Illustrator</p>
-                <p className='text-gray-800 py-1'>Figma</p>
+              <Image src={cssLogo} width={150} height={150} className='inline'/>
+              <h3 className='text-lg font-medium pt-8'>CSS</h3>
             </div>
 
-            {/* Code */}
-            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
-              <Image src={code} width={100} height={100} className='inline'/>
-              <h3 className='text-lg font-medium pt-8 pb-2'>Beatiful Designs</h3>
-              <p className='py-2'>
-                Crating elegant designs suited for your needs design theory....
-              </p>
-              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
-                <p className='text-gray-800 py-1'>Photoshop</p>
-                <p className='text-gray-800 py-1'>Illustrator</p>
-                <p className='text-gray-800 py-1'>Figma</p>
+            {/* html */}
+            <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
+              <Image src={htmlLogo} width={150} height={150} className='inline'/>
+              <h3 className='text-lg font-medium pt-8'>HTML</h3>
             </div>
 
-            {/* Consulting */}
-            <div className='text-center shadow-lg p-10 rounded-xl my-10'>
-              <Image src={consulting} width={100} height={100} className='inline'/>
-              <h3 className='text-lg font-medium pt-8 pb-2'>Beatiful Designs</h3>
-              <p className='py-2'>
-                Crating elegant designs suited for your needs design theory....
-              </p>
-              <h4 className='py-4 text-teal-600'>Design tools I use</h4>
-                <p className='text-gray-800 py-1'>Photoshop</p>
-                <p className='text-gray-800 py-1'>Illustrator</p>
-                <p className='text-gray-800 py-1'>Figma</p>
+            {/* javascript */}
+            <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
+              <Image src={javascriptLogo} width={150} height={150} className='inline'/>
+              <h3 className='text-lg font-medium pt-8'>Javascript</h3>
             </div>
+
+            {/* react */}
+            <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
+              <Image src={reactLogo} width={150} height={150} className='inline'/>
+              <h3 className='text-lg font-medium pt-8'>ReactJS</h3>
+            </div>
+
+            {/* Node */}
+            <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
+              <Image src={nodeLogo} width={150} height={150} className='inline'/>
+              <h3 className='text-lg font-medium pt-8'>NodeJS</h3>
+            </div>
+
           </div>
         </section>
 
         <section>
           <div>
-            <h3 className='text-3xl py-1'>PortFolio</h3>
-            <p className='text-md py-2 leading-8 text-gray-800'>
+            <h3 className='text-3xl py-1 dark:text-white'>PortFolio</h3>
+            <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, <span className='text-teal-500'>rutrum</span> non lacus eget, tristique blandit turpis. Donec euismod <span className='text-teal-500'>rutrum</span> ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
             </p>
           </div>
@@ -130,17 +141,17 @@ export default function Home() {
               <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
             </div>
 
-            <div className='basis-1/3 flex-1'>
-              <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
-            </div>
+            {/* <div className='basis-1/3 flex-1'>
+              <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+            </div> */}
 
             <div className='basis-1/3 flex-1'>
               <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
             </div>
 
-            <div className='basis-1/3 flex-1'>
-              <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
-            </div>
+            {/* <div className='basis-1/3 flex-1'>
+              <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+            </div> */}
 
             <div className='basis-1/3 flex-1'>
               <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
