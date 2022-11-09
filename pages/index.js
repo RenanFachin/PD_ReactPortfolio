@@ -9,11 +9,11 @@ import { AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
 // Imports de imagens
 import Image from "next/image";
 import web1 from '../public/web1.png'
-import web2 from '../public/web2.png'
 import web3 from '../public/web3.png'
-import web4 from '../public/web4.png'
 import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
+import NLWCOPA from '../public/NLW_Copa.PNG'
+import NLWESPORTS from '../public/NLW_Esports.PNG'
 
 import javascriptLogo from '../public/tecs/javascript.png'
 import cssLogo from '../public/tecs/css.png'
@@ -142,39 +142,46 @@ export default function Home() {
           </div>
 
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
-              <a href='https://github.com/RenanFachin/RS_ExplorerLab_RocketPAY'>
-                <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+
+          {/* NLW ESPORTS */}
+          <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://github.com/RenanFachin/RS_NLWeSports'>
+                <Image src={NLWESPORTS} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
               </a>
             </div>
 
-            {/* <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
-              <a href='https://renanfachin.github.io/RS_IgniteLAB_Design_System-/?path=/story/pages-signin--default'>
-                <Image src={web2} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+          {/* NLW COPA */}
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://github.com/RenanFachin/RS_NLW_Copa'>
+                <Image src={NLWCOPA} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
               </a>
-            </div> */}
+            </div>
 
+          {/* FOOD EXPLORER */}
             <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://foodexplorer182.netlify.app/'>
                 <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
 
-            {/* <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
-              <a href='https://github.com/RenanFachin/RS_NLWeSports'>
-                <Image src={web4} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
-              </a>
-            </div> */}
-
-            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
-              <a href='https://renanfachin.github.io/PA_Pokedex/'>
-              <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
-              </a>
-            </div>
-
+          {/* ROCKETMOVIES */}
             <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://rocketmovies182.netlify.app/'>
                 <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+              </a>
+            </div>
+
+          {/* ROCKETPAY */}
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://github.com/RenanFachin/RS_ExplorerLab_RocketPAY'>
+                <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+              </a>
+            </div>
+
+          {/* POKEMON */}
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://renanfachin.github.io/PA_Pokedex/'>
+              <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
               </a>
             </div>
           </div>
