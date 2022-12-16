@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 // Imports de ícones
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
-import { AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
 
 // Imports de imagens
 import Image from "next/image";
@@ -14,6 +14,9 @@ import web5 from '../public/web5.png'
 import web6 from '../public/web6.png'
 import NLWCOPA from '../public/NLW_Copa.PNG'
 import NLWESPORTS from '../public/NLW_Esports.PNG'
+import PlantManager from '../public/NLW_PlantManager.png'
+import NLW_FeedbackWidget from '../public/NLW_FeedbackWidget.png'
+
 
 import javascriptLogo from '../public/tecs/javascript.png'
 import cssLogo from '../public/tecs/css.png'
@@ -39,27 +42,27 @@ export default function Home() {
 
             <ul className='flex items-center'>
               {
-              darkMode ?
-              <li>
-                <BsFillSunFill
-                  onClick={() => {setDarkMode(!darkMode)}}
-                  className='cursor-pointer text-2xl dark:text-white'
-                />
-              </li>
+                darkMode ?
+                  <li>
+                    <BsFillSunFill
+                      onClick={() => { setDarkMode(!darkMode) }}
+                      className='cursor-pointer text-2xl dark:text-white'
+                    />
+                  </li>
 
-              :
-              
-              <li>
-              <BsFillMoonStarsFill
-                onClick={() => {setDarkMode(!darkMode)}}
-                className='cursor-pointer text-2xl'
-              />
-            </li>
+                  :
+
+                  <li>
+                    <BsFillMoonStarsFill
+                      onClick={() => { setDarkMode(!darkMode) }}
+                      className='cursor-pointer text-2xl'
+                    />
+                  </li>
               }
 
               <li>
-                <a 
-                className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-2 rounded-md ml-8' href='https://devrenanfachin.netlify.app/'>
+                <a
+                  className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-2 rounded-md ml-8' href='https://devrenanfachin.netlify.app/'>
                   Resume
                 </a>
               </li>
@@ -70,21 +73,21 @@ export default function Home() {
             <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Renan Fachin</h2>
             <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>JR. Front-End Developer</h3>
             <p className='text-md py-5 leading-8 text-gray-80 md:text-lg max-w-xl mx-auto dark:text-white'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, rutrum non lacus eget, tristique blandit turpis. Donec euismod libero ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet hendrerit velit eget iaculis. Cras urna metus, rutrum non lacus eget, tristique blandit turpis. Donec euismod libero ut iaculis dictum. Nulla facilisi. Morbi non dignissim sapien, sed hendrerit urna. Etiam mi eros, cursus id ante ac, ultrices condimentum tortor.
             </p>
           </div>
 
           <div className='text-5xl flex justify-center gap-14 py-3 text-gray-600 md:text-6xl'>
             <a href='https://github.com/RenanFachin'>
-              <AiFillGithub className='dark:text-teal-700 cursor-pointer hover:text-teal-600'/>
+              <AiFillGithub className='dark:text-teal-700 cursor-pointer hover:text-teal-600' />
             </a>
 
             <a href='https://www.linkedin.com/in/renan-fachin/'>
-              <AiFillLinkedin className='dark:text-teal-700 cursor-pointer hover:text-teal-600'/>
+              <AiFillLinkedin className='dark:text-teal-700 cursor-pointer hover:text-teal-600' />
             </a>
- 
+
             <a href='#'>
-              <AiFillInstagram className='dark:text-teal-700 cursor-pointer hover:text-teal-600'/>
+              <AiFillInstagram className='dark:text-teal-700 cursor-pointer hover:text-teal-600' />
             </a>
 
           </div>
@@ -102,31 +105,31 @@ export default function Home() {
           <div className='lg:flex justify-between'>
             {/* css */}
             <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-              <Image src={cssLogo} width={150} height={150} className='inline'/>
+              <Image src={cssLogo} width={150} height={150} className='inline' />
               <h3 className='text-lg font-medium pt-8'>CSS</h3>
             </div>
 
             {/* html */}
             <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-              <Image src={htmlLogo} width={150} height={150} className='inline'/>
+              <Image src={htmlLogo} width={150} height={150} className='inline' />
               <h3 className='text-lg font-medium pt-8'>HTML</h3>
             </div>
 
             {/* javascript */}
             <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
-              <Image src={javascriptLogo} width={150} height={150} className='inline'/>
+              <Image src={javascriptLogo} width={150} height={150} className='inline' />
               <h3 className='text-lg font-medium pt-8'>Javascript</h3>
             </div>
 
             {/* react */}
             <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
-              <Image src={reactLogo} width={150} height={150} className='inline'/>
+              <Image src={reactLogo} width={150} height={150} className='inline' />
               <h3 className='text-lg font-medium pt-8'>ReactJS</h3>
             </div>
 
             {/* Node */}
             <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white'>
-              <Image src={nodeLogo} width={150} height={150} className='inline'/>
+              <Image src={nodeLogo} width={150} height={150} className='inline' />
               <h3 className='text-lg font-medium pt-8'>NodeJS</h3>
             </div>
 
@@ -143,47 +146,63 @@ export default function Home() {
 
           <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
 
-          {/* NLW ESPORTS */}
-          <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+            {/* NLW ESPORTS */}
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://github.com/RenanFachin/RS_NLWeSports'>
-                <Image src={NLWESPORTS} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+                <Image src={NLWESPORTS} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
               </a>
             </div>
 
-          {/* NLW COPA */}
+            {/* NLW COPA */}
             <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://github.com/RenanFachin/RS_NLW_Copa'>
-                <Image src={NLWCOPA} className='rounded-lg object-cover' width={'100%'} height={'100%'}layout="responsive"/>
+                <Image src={NLWCOPA} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
               </a>
             </div>
 
-          {/* FOOD EXPLORER */}
+            {/* FOOD EXPLORER */}
             <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://foodexplorer182.netlify.app/'>
-                <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+                <Image src={web3} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
               </a>
             </div>
 
-          {/* ROCKETMOVIES */}
+            {/* ROCKETMOVIES */}
             <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://rocketmovies182.netlify.app/'>
-                <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+                <Image src={web6} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
               </a>
             </div>
 
-          {/* ROCKETPAY */}
+            {/* ROCKETPAY */}
             <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://github.com/RenanFachin/RS_ExplorerLab_RocketPAY'>
-                <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+                <Image src={web1} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
               </a>
             </div>
 
-          {/* POKEMON */}
+            {/* POKEMON */}
             <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
               <a href='https://renanfachin.github.io/PA_Pokedex/'>
-              <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive"/>
+                <Image src={web5} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
               </a>
             </div>
+
+
+            {/* PLANTMANAGER */}
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://github.com/RenanFachin/RS_NLW_PlantManager'>
+                <Image src={PlantManager} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+              </a>
+            </div>
+
+            {/* Feedback Widget */}
+            <div className='basis-1/3 flex-1 shadow-lg md:brightness-50 md:blur-[1px] hover:blur-none hover:scale-105 hover:brightness-100 transition duration-700'>
+              <a href='https://github.com/RenanFachin/RS_NLW_FeedGet-WEB'>
+                <Image src={NLW_FeedbackWidget} className='rounded-lg object-cover' width={'100%'} height={'100%'} layout="responsive" />
+              </a>
+            </div>
+
           </div>
 
         </section>
